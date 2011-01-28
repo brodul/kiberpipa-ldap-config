@@ -3,10 +3,11 @@ Configure LDAP for Cyberpipe (https://help.ubuntu.com/community/LDAPClientAuthen
 
 sudo su
 aptitude install libpam-ldap libnss-ldap nss-updatedb libnss-db
-cp pam_ldap.conf /etc/pam_ldap.conf
-cp ldap.conf /etc/
-cp libnss-ldap.conf /etc/
-cp nsswitch.conf /etc/
+cp kiberpipa-ldap-config/pam_ldap.conf /etc/pam_ldap.conf
+cp kiberpipa-ldap-config/ldap.conf /etc/
+cp kiberpipa-ldap-config/libnss-ldap.conf /etc/
+cp kiberpipa-ldap-config/nsswitch.conf /etc/
+mv /etc/ldap/ldap.conf /etc/ldap/ldap.confBACKUP
 ln -s /etc/ldap.conf /etc/ldap/ldap.conf
 ln -s /etc/libnss-ldap.conf /etc/ldap/
 
