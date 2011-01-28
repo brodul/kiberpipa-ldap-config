@@ -1,7 +1,8 @@
-Configure LDAP for Cyberpipe (https://help.ubuntu.com/community/LDAPClientAuthentication)
-========================================
+#Configure LDAP for Cyberpipe (https://help.ubuntu.com/community/LDAPClientAuthentication)
+#========================================
 
-sudo su
+git clone git://github.com/brodul/kiberpipa-ldap-config.git
+
 aptitude install libpam-ldap libnss-ldap nss-updatedb libnss-db
 cp kiberpipa-ldap-config/pam_ldap.conf /etc/pam_ldap.conf
 cp kiberpipa-ldap-config/ldap.conf /etc/
@@ -11,4 +12,3 @@ mv /etc/ldap/ldap.conf /etc/ldap/ldap.confBACKUP
 ln -s /etc/ldap.conf /etc/ldap/ldap.conf
 ln -s /etc/libnss-ldap.conf /etc/ldap/
 
-# configure PAM by following link in title
